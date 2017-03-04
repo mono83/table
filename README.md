@@ -92,6 +92,7 @@ There are some implementations in `cells` package, most of them can be obtained 
 |--------------|:----------:|---------|
 |`cells.Empty` |*none*      | Empty cells |
 |`cells.String`|`string`    | String values |
+|`cells.Int`   |`int`       | `int` values |
 |`cells.Int64` |`int64`     | `int64` values |
 |`cells.Bytes` |`int64`     | Byte size of something. This implementation will format value and append suffixes like Kb, Mb, Gb |
 
