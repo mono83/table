@@ -86,12 +86,14 @@ type Cell interface {
 }
 ```
 
-There are some implementations in `cells` package:
+There are some implementations in `cells` package, most of them can be obtained using simple type casting:
 
-* `cells.Empty` - for empty cells
-* `cells.String` - string implementation of `table.Cell`, castable from `string`
-* `cells.Int64` - int64 implementation of `table.Cell`, castable from `int64`
-* `cells.Bytes` - implementation of `table.Cell` used to display byte size data, castable from `int64`
+|     Type     | Casts&nbsp;from | Usecase |
+|--------------|:----------:|---------|
+|`cells.Empty` |*none*      | Empty cells |
+|`cells.String`|`string`    | String values |
+|`cells.Int64` |`int64`     | `int64` values |
+|`cells.Bytes` |`int64`     | Byte size of something. This implementation will format value and append suffixes like Kb, Mb, Gb |
 
 There are some useful coloring adapters, designed as function, that takes `table.Cell` as argument. Suffix `hi`
 stands for high-intensity.
