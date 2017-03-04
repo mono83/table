@@ -101,7 +101,7 @@ stands for high-intensity.
 * `cells.ColoredCyan` and `cells.ColoredCyanHi` - cyan cell coloring
 * `cells.ColoredYellow` and `cells.ColoredYellowHi` - yellow cell coloring
 * `cells.ColoredBlue` and `cells.ColoredBlueHi` - blue cell coloring
-* `cells.ColoredWhite` and `cells.ColoredWhiteHi` - blue cell coloring
+* `cells.ColoredWhite` and `cells.ColoredWhiteHi` - white cell coloring
 * `cells.ColoredString` - standard color for strings (currently - green)
 * `cells.ColoredInt` - standard color for integers (currently - cyan)
 
