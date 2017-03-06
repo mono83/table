@@ -81,10 +81,14 @@ All cells in table must implement `table.Cell interface`:
 type Cell interface {
 	// Returns cell width
 	Width() int
+	// Returns plain string representation of cell contents
+	String() string
 	// Returns formatted value of cell
 	PrintFormat(width int) string
 }
 ```
+
+### Implementations
 
 There are some implementations in `cells` package, most of them can be obtained using simple type casting:
 
@@ -95,6 +99,10 @@ There are some implementations in `cells` package, most of them can be obtained 
 |`cells.Int`   |`int`       | `int` values |
 |`cells.Int64` |`int64`     | `int64` values |
 |`cells.Bytes` |`int64`     | Byte size of something. This implementation will format value and append suffixes like Kb, Mb, Gb |
+
+### Formatting adapters
+
+#### Coloring
 
 There are some useful coloring adapters, designed as function, that takes `table.Cell` as argument. Suffix `hi`
 stands for high-intensity.
@@ -108,6 +116,15 @@ stands for high-intensity.
 * `cells.ColoredString` - standard color for strings (currently - green)
 * `cells.ColoredInt` - standard color for integers (currently - cyan)
 
+#### Alignment
+
+* `cells.AlignLeft`
+* `cells.AlignRight`
+* `cells.AlignCenter`
+
+### Cell helpers
+
+* `cells.Sprintf` - shortcut to string cell, built using `fmt.Sprintf`
 
 ## Print options
 

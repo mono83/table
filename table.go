@@ -4,6 +4,8 @@ package table
 type Cell interface {
 	// Returns cell width
 	Width() int
+	// Returns plain string representation of cell contents
+	String() string
 	// Returns formatted value of cell
 	PrintFormat(width int) string
 }

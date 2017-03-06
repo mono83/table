@@ -5,6 +5,8 @@ import "strings"
 // Empty represents empty cell
 type Empty struct{}
 
+func (Empty) String() string { return "" }
+
 // Width returns cell contents width
 func (Empty) Width() int { return 0 }
 

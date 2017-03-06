@@ -19,5 +19,5 @@ func (i Int64) Width() int {
 
 // PrintFormat returns integer value, aligned to right
 func (i Int64) PrintFormat(width int) string {
-	return table.TextAlignRight(i.String(), width)
+	return table.TextAlignRight(i.String(), width, i.Width())
 }

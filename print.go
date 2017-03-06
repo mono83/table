@@ -43,7 +43,7 @@ func Print(t Interface, opt PrintOptions) error {
 			if i > 0 {
 				opt.Writer.Write([]byte(opt.ColumnSeparator))
 			}
-			opt.Writer.Write([]byte(TextAlignCenter(h, compiled.Widths[i])))
+			opt.Writer.Write([]byte(TextAlignCenter(h, compiled.Widths[i], len(h))))
 		}
 
 		opt.Writer.Write([]byte("\n"))

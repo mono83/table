@@ -11,6 +11,10 @@ func (c *colored) Width() int {
 	return c.real.Width()
 }
 
+func (c *colored) String() string {
+	return c.real.String()
+}
+
 func (c *colored) PrintFormat(width int) string {
 	return table.Colorize(c.real.PrintFormat(width), c.colorCode)
 }

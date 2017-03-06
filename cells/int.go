@@ -6,7 +6,7 @@ import (
 )
 
 // Int table.Cell implementation
-type Int int64
+type Int int
 
 func (i Int) String() string {
 	return strconv.Itoa(int(i))
@@ -19,5 +19,5 @@ func (i Int) Width() int {
 
 // PrintFormat returns integer value, aligned to right
 func (i Int) PrintFormat(width int) string {
-	return table.TextAlignRight(i.String(), width)
+	return table.TextAlignRight(i.String(), width, i.Width())
 }

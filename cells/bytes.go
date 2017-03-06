@@ -29,7 +29,7 @@ func (b Bytes) Width() int {
 
 // PrintFormat formats cell output
 func (b Bytes) PrintFormat(width int) string {
-	return table.TextAlignRight(b.String(), width)
+	return table.TextAlignRight(b.String(), width, b.Width())
 }
 
 func (b Bytes) chunks() (float64, string) {
