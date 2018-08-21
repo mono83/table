@@ -15,6 +15,11 @@ type PrintOptions struct {
 	HeaderBorder    string
 }
 
+// PrintStandard outputs table into standard output using standard options
+func PrintStandard(t Interface) error {
+	return Print(t, PrintOptions{ColumnSeparator: " | ", HeaderBorder: "-", Writer: os.Stdout})
+}
+
 // Print function outputs table using provided printing options
 func Print(t Interface, opt PrintOptions) error {
 	// Checking defaults
